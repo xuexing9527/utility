@@ -13,12 +13,12 @@ sweetString.prototype.deleteSpaceRight = (str) => {
 }
 sweetString.prototype.deleteSpace = (str, direction) => {
   if (direction === 'left') {
-    return this.deleteSpaceLeft(str);
+    return sweetString.prototype.deleteSpaceLeft(str);
   }
   if (direction === 'right') {
-    return this.deleteSpaceRight(str)
+    return sweetString.prototype.deleteSpaceRight(str)
   }
   if (!direction || direction === 'all') {
-    return this.deleteSpaceAll(str)
+    return sweetString.prototype.deleteSpaceAll(str)
   }
 }
