@@ -1,0 +1,9 @@
+{
+  "name": "utility",
+  "version": "1.0.0",
+  "description": "common fun",
+  "main": "index.js",
+  "repository": "https://github.com/xuexing9527/utility.git",
+  "author": "xuexing",
+  "license": "MIT"
+}
