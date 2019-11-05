@@ -45,7 +45,7 @@ sweetObject.prototype.keyValueSwapNumber = (obj) => {
 sweetObject.prototype.keyValueSwapAll = (obj) => {
   const keyValueSwapObj = {};
   for (let key in obj) {
-    if (obj[key] && (['symbol', 'number', 'string'].includes(obj[key]))) {
+    if (obj[key] && (['symbol', 'number', 'string'].includes(typeof obj[key]))) {
       keyValueSwapObj[obj[key]] = key
     }
   }
