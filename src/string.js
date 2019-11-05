@@ -1,5 +1,6 @@
 'use strict';
 const sweetString = function() {};
+
 sweetString.prototype.deleteSpaceAll = (str) => {
   return String.prototype.replace.call(str, /\s+/g, '');
 }
@@ -11,6 +12,7 @@ sweetString.prototype.deleteSpaceLeft = (str) => {
 sweetString.prototype.deleteSpaceRight = (str) => {
   return String.prototype.replace.call(str, /(\s*$)/g, '');
 }
+
 sweetString.prototype.deleteSpace = (str, direction) => {
   if (direction === 'left') {
     return sweetString.prototype.deleteSpaceLeft(str);
