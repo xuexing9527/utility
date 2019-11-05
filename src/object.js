@@ -17,6 +17,8 @@ sweetObject.prototype.keyValueSwapString = (obj) => {
   for (const key in obj) {
     if (obj[key] && typeof obj[key] === 'string') {
       keyValueSwapObj[obj[key]] = key
+    } else {
+      keyValueSwapObj[key] = obj[key]
     }
   }
   return keyValueSwapObj;
@@ -27,6 +29,8 @@ sweetObject.prototype.keyValueSwapSymbol = (obj) => {
   for (const key in obj) {
     if (obj[key] && typeof obj[key] === 'symbol') {
       keyValueSwapObj[obj[key]] = key
+    } else {
+      keyValueSwapObj[key] = obj[key]
     }
   }
   return keyValueSwapObj;
@@ -37,6 +41,8 @@ sweetObject.prototype.keyValueSwapNumber = (obj) => {
   for (const key in obj) {
     if (obj[key] && typeof obj[key] === 'number') {
       keyValueSwapObj[obj[key]] = key
+    } else {
+      keyValueSwapObj[key] = obj[key]
     }
   }
   return keyValueSwapObj;
@@ -51,6 +57,8 @@ sweetObject.prototype.keyValueSwapAll = (obj) => {
       || typeof obj[key] === 'string'
     )) {
       keyValueSwapObj[obj[key]] = key
+    } else {
+      keyValueSwapObj[key] = obj[key]
     }
   }
   return keyValueSwapObj;
