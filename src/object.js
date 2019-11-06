@@ -24,17 +24,18 @@ sweetObject.prototype.keyValueSwapString = (obj) => {
   return keyValueSwapObj;
 }
 
-sweetObject.prototype.keyValueSwapSymbol = (obj) => {
-  const keyValueSwapObj = {};
-  for (const key in obj) {
-    if (obj[key] && typeof obj[key] === 'symbol') {
-      keyValueSwapObj[obj[key]] = key
-    } else {
-      keyValueSwapObj[key] = obj[key]
-    }
-  }
-  return keyValueSwapObj;
-}
+// for in 遍历不出 symbol
+// sweetObject.prototype.keyValueSwapSymbol = (obj) => {
+//   const keyValueSwapObj = {};
+//   for (const key in obj) {
+//     if (obj[key] && typeof obj[key] === 'symbol') {
+//       keyValueSwapObj[obj[key]] = key
+//     } else {
+//       keyValueSwapObj[key] = obj[key]
+//     }
+//   }
+//   return keyValueSwapObj;
+// }
 
 sweetObject.prototype.keyValueSwapNumber = (obj) => {
   const keyValueSwapObj = {};
@@ -51,11 +52,7 @@ sweetObject.prototype.keyValueSwapNumber = (obj) => {
 sweetObject.prototype.keyValueSwapAll = (obj) => {
   const keyValueSwapObj = {};
   for (const key in obj) {
-    if (obj[key] && (
-      typeof obj[key] === 'symbol'
-      || typeof obj[key] === 'number'
-      || typeof obj[key] === 'string'
-    )) {
+    if (obj[key] && (typeof obj[key] === 'number' || typeof obj[key] === 'string')) {
       keyValueSwapObj[obj[key]] = key
     } else {
       keyValueSwapObj[key] = obj[key]
